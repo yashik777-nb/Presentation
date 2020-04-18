@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing : border-box;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -10,7 +11,7 @@
     --page2-background-color: tan;
     --page3-background-color: teal;
     --page4-background-color: slateblue;
-    --animate-speed: 1s;
+    --animate-speed: 2s;
 }
 
 body{
@@ -81,3 +82,25 @@ a {
     background: #f4f4f4;
     color: #333333;
 }
+
+/* Animations */
+#page-1 h1 {
+    transform: translateY(-1200px);
+    animation: animateH1 var(--animate-speed) forwards ease-in;
+}
+@keyframes animateH1{
+    to{
+        transform: translateY(0px);
+    }
+}
+
+#page-1 p{
+    transform: translateX(-1800px);
+    animation: animateP var(--animate-speed) forwards ease-in 1s;
+}
+@keyframes animateP{
+    to{
+        transform: translateX(0px);
+    }
+}
+
